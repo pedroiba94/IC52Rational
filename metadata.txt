@@ -1,0 +1,47 @@
+[general]
+name=IC52Rational
+qgisMinimumVersion=3.40
+qgisMaximumVersion=4.99
+version=0.1.0
+description=Peak flow calculator using the IC 5.2-IC Rational Method (Spanish Road Drainage Standard, Chapter 2). Computes QT for T=2, MCO, 5, 10, 25, 50, 100 and 500 years with full traceability. P0i from CLC layer. Excel export included.
+author=Pedro Bohorquez Aliaga y Hugo Bohorquez Aliaga
+email=bohoraling@gmail.com
+
+about=IC52IC_Racional implements the full IC 5.2-IC rational method (Norma 5.2-IC, Capítulo 2) for surface drainage design of Spanish roads and infrastructure.
+
+  Features:
+  - 8 simultaneous return periods: T=2, MCO(≈2.5 interp.), 5, 10, 25, 50, 100, 500 years
+  - Full formula chain: KA, tc, Fa, Fb, Fint, I(T,tc), C, Kt, QT
+  - Heterogeneous catchment support (§2.2.4): Σ[Ci·Ai]
+  - P0i automatic calculation from CLC layer (Table 2.3, same approach as CLC2Manning)
+  - Regional β corrector from Table 2.5 (all regions) with log-linear FT interpolation
+  - Contextual ArcGIS Online maps: β regions (Fig. 2.9) and hydrological groups (Fig. 2.7)
+  - Pd automatic calculation from P_media and Cv (DGC table, linear interpolation)
+  - Levante/SE method §2.3 for regions 72, 821, 822 with T>25 years
+  - Excel export with colour-coded results table
+  - QGIS 4.0 / Qt6 only
+
+homepage=https://github.com/pedroiba94/IC52Rational
+repository=https://github.com/pedroiba94/IC52Rational
+tracker=https://github.com/pedroiba94/IC52Rational/issues
+
+category=Analysis
+tags=rational method, hydrology, drainage, IC 5.2-IC, instruccion carreteras, caudal, escorrentia, metodo racional, p0, umbral escorrentia, CLC, corine, beta corrector, spain, drenaje superficial, carreteras, hidrologia
+
+icon=icon.png
+experimental=True
+deprecated=False
+hasProcessingProvider=False
+server=False
+
+changelog=
+    0.1.0 - First public release.
+             Full IC 5.2-IC Chapter 2 rational method.
+             8 return periods: T=2, MCO(2.5 interp.), 5, 10, 25, 50, 100, 500.
+             Heterogeneous catchment §2.2.4 with P0i from CLC layer (Table 2.3).
+             Beta Table 2.5 all regions, FT log-linear interpolation.
+             Pd from P_media + Cv (DGC table).
+             Levante/SE §2.3 for regions 72, 821, 822.
+             Contextual ArcGIS Online maps for tabs 2 and 3.
+             Excel export with colour-coded results.
+             Qt6/QGIS 4.0 only.
